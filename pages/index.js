@@ -52,7 +52,7 @@ export default function Home() {
           <input disabled = {loading} type="submit" value={loading ? "Fetching Result..." : "Generate answer"} />
         </form>
         <div style={{ marginTop: 40 }}>{tryLeft}</div>
-        <pre className={styles.result}>{result}</pre>
+        <div className={styles.result} style={{ textAlign: "justify", padding: 16 }}>{result}</div>
       </main>
     </div>
   );
