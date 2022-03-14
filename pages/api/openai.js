@@ -34,7 +34,7 @@ export default async function (req, res) {
         count = count + 1
       }
 
-      const completion = await openai.createCompletion("text-ada-001", {
+      const completion = await openai.createCompletion("text-davinci-001", {
         prompt: generatePrompt(req.body.question),
         temperature: 0.7,
         max_tokens: 1000,
