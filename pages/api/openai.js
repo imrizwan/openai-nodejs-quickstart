@@ -12,9 +12,6 @@ export default async function (req, res) {
     try {
       let { db } = await connectToDatabase();
       let collection = db.collection('ips')
-      // const IPSchema = new mongoose.Schema({ ip: { type: String, required: true }, count: { type: Number, required: true, default: 0 } });
-
-      // const IP = mongoose.models.IP || mongoose.model('IP', IPSchema)
 
       let ip = await publicIp.v4();
       ip = ip.split(".").join("");
